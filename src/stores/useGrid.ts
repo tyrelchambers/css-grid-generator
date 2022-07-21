@@ -12,4 +12,13 @@ export const useGrid = create<IGridStore>((set) => ({
   setRowGap: (rowGap) => set((state) => ({ ...state, rowGap })),
   setColumnGap: (columnGap) => set((state) => ({ ...state, columnGap })),
   setGap: (gap) => set((state) => ({ ...state, gap })),
+  reset: () =>
+    set((state) => ({
+      ...state,
+      columns: 4,
+      rows: 4,
+      rowGap: 0,
+      columnGap: 0,
+      gap: 0,
+    })),
 }));

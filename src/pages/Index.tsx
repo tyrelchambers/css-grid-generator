@@ -7,7 +7,7 @@ const Index = () => {
   const grid = useGrid((state) => state);
   return (
     <Wrapper>
-      <Grid columns={grid.columns} rows={grid.rows} />
+      <Grid {...grid} />
     </Wrapper>
   );
 };

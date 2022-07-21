@@ -1,8 +1,6 @@
 export const stylesFromCSSObj = (css) => {
   let styles = "";
 
-  // get last property in object
-
   for (const key in css) {
     if (Object.prototype.hasOwnProperty.call(css, key)) {
       styles += `${key} { `;
@@ -22,7 +20,5 @@ export const stylesFromCSSObj = (css) => {
       }
     }
   }
-
-  console.log(styles);
   return styles;
 };

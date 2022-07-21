@@ -27,6 +27,7 @@ const GridOptions = () => {
         />
       </div>
 
+      <p className="font-bold">Grid gaps</p>
       <div className="flex flex-col">
         <label htmlFor="rows">Gap</label>
         <input
@@ -44,19 +45,21 @@ const GridOptions = () => {
           type="number"
           name="columnGap"
           placeholder="Enter column gap amount"
-          value={grid.rows}
+          value={grid.columnGap}
           onChange={(e) => grid.setColumnGap(Number(e.target.value))}
+          readOnly={grid.gap > 0}
         />
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="rows">Rows</label>
+        <label htmlFor="rows">Row Gap</label>
         <input
           type="number"
           name="rowGap"
           placeholder="Enter row gap amount"
-          value={grid.rows}
+          value={grid.rowGap}
           onChange={(e) => grid.setRowGap(Number(e.target.value))}
+          readOnly={grid.gap > 0}
         />
       </div>
     </>
