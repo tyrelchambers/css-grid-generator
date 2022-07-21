@@ -26,6 +26,39 @@ const GridOptions = () => {
           onChange={(e) => grid.setRows(Number(e.target.value))}
         />
       </div>
+
+      <div className="flex flex-col">
+        <label htmlFor="rows">Gap</label>
+        <input
+          type="number"
+          name="gap"
+          placeholder="Enter # of gap"
+          value={grid.gap}
+          onChange={(e) => grid.setGap(Number(e.target.value))}
+        />
+      </div>
+
+      <div className="flex flex-col">
+        <label htmlFor="rows">Column Gap</label>
+        <input
+          type="number"
+          name="columnGap"
+          placeholder="Enter column gap amount"
+          value={grid.rows}
+          onChange={(e) => grid.setColumnGap(Number(e.target.value))}
+        />
+      </div>
+
+      <div className="flex flex-col">
+        <label htmlFor="rows">Rows</label>
+        <input
+          type="number"
+          name="rowGap"
+          placeholder="Enter row gap amount"
+          value={grid.rows}
+          onChange={(e) => grid.setRowGap(Number(e.target.value))}
+        />
+      </div>
     </>
   );
 };
