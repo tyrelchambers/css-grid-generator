@@ -5,7 +5,8 @@ export const createGrid = (grid: GridProps) => {
   console.log(grid);
 
   const gridWrapper = document.querySelector("#grid-wrapper");
-  gridWrapper.innerHTML = "";
+
+  gridWrapper!.innerHTML = "";
 
   const columns = grid.columns;
   const rows = grid.rows;

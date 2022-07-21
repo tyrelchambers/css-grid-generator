@@ -1,4 +1,4 @@
-export const stylesFromCSSObj = (css) => {
+export const stylesFromCSSObj = (css: any) => {
   let styles = "";
 
   for (const key in css) {
