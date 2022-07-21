@@ -11,10 +11,10 @@ export const stylesFromCSSObj = (css: any) => {
         if (Object.prototype.hasOwnProperty.call(css[key], subKey)) {
           const element = css[key][subKey];
 
-          if (subKey !== lastProperty) {
-            styles += `${subKey}: ${element}; `;
-          } else {
-            styles += `${subKey}: ${element}; } `;
+          styles += `${subKey}: ${element}; `;
+
+          if (subKey === lastProperty) {
+            styles += "}";
           }
         }
       }

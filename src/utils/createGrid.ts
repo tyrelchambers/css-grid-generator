@@ -2,8 +2,6 @@ import { GridProps } from "../types";
 import { createGridElem } from "./createGridElem";
 
 export const createGrid = (grid: GridProps) => {
-  console.log(grid);
-
   const gridWrapper = document.querySelector("#grid-wrapper");
 
   gridWrapper!.innerHTML = "";
