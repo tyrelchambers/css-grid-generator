@@ -15,7 +15,11 @@ const Header = () => {
       </div>
 
       <div className="flex items-center">
-        <button type="button" onClick={() => setOpened(true)}>
+        <button
+          type="button"
+          onClick={() => setOpened(true)}
+          className="bg-indigo-800 py-2 px-6 rounded-full text-white font-bold text-sm"
+        >
           Get code
         </button>
       </div>
