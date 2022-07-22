@@ -18,7 +18,7 @@ const HtmlExport = () => {
         <button
           type="button"
           className="bg-blue-600 py-2 px-4 rounded-md text-white font-semibold text-sm mt-4"
-          onClick={() => copyToClipboard(gridMain?.outerHTML)}
+          onClick={() => copyToClipboard(gridMain!.outerHTML)}
         >
           Copy HTML
         </button>
