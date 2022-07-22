@@ -4,7 +4,7 @@ export const buildCssSnippet = (css: any) => {
   for (const key in css) {
     if (Object.prototype.hasOwnProperty.call(css, key)) {
       const element = document.createElement("div");
-      element.innerHTML = `<div class="flex gap-4"><span class="text-indigo-800 font-semibold">${key}</span> <span class="text-gray-500">{</span></div> `;
+      element.innerHTML = `<div class="flex gap-4"><span class="text-indigo-300 font-semibold">${key}</span> <span class="text-gray-200">{</span></div> `;
       wrapper.appendChild(element);
 
       // this is for the properties of each css code block
@@ -14,11 +14,11 @@ export const buildCssSnippet = (css: any) => {
         if (Object.prototype.hasOwnProperty.call(css[key], subKey)) {
           const subElem = document.createElement("div");
           subElem.classList.add("italic");
-          subElem.innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-indigo-600">${subKey}</span>: <span class="text-gray-800">${css[key][subKey]}</span>; `;
+          subElem.innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-indigo-400">${subKey}</span>: <span class="text-gray-300">${css[key][subKey]}</span>; `;
           element.appendChild(subElem);
 
           if (subKey === lastProperty) {
-            element.innerHTML += `<span class="text-gray-500">}</span>`;
+            element.innerHTML += `<span class="text-gray-300">}</span>`;
           }
         }
       }

@@ -8,9 +8,9 @@ const CssExport = () => {
   const { css, cssString } = getHtmlAndCss(grid);
 
   return (
-    <div>
+    <>
       <div
-        className="bg-gray-100 p-4 rounded-xl"
+        className="bg-gray-900 text-white p-4 rounded-xl"
         dangerouslySetInnerHTML={{ __html: css.innerHTML }}
       ></div>
       <div className="flex justify-end">
@@ -22,7 +22,7 @@ const CssExport = () => {
           Copy CSS
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
