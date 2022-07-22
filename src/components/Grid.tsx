@@ -9,7 +9,14 @@ const Grid = (grid: GridProps) => {
     createCss(grid);
   }, [grid]);
 
-  return <section className="grid-wrapper" id="grid-wrapper"></section>;
+  return (
+    <div className="p-6 h-full">
+      <section
+        className="grid-wrapper border-gray-400 border-2 shadow-xl"
+        id="grid-wrapper"
+      ></section>
+    </div>
+  );
 };
 
 export default Grid;

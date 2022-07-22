@@ -18,7 +18,7 @@ const Header = () => {
         <button
           type="button"
           onClick={() => setOpened(true)}
-          className="bg-indigo-800 py-2 px-6 rounded-full text-white font-bold text-sm"
+          className="bg-red-500 py-2 px-6 rounded-full text-white font-bold text-sm hover:shadow-lg transition-all"
         >
           Get code
         </button>

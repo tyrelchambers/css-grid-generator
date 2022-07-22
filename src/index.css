@@ -14,3 +14,29 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.main-bg {
+  height: 100vh;
+  opacity: 0.8;
+  background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
+}
+
+.grid-wrapper {
+  background: rgb(71 85 105);
+}
+
+[class*="grid-col"] {
+  background-color: rgba(148, 163, 184, 1);
+  opacity: 1;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(100 116 139),
+    rgba(100 116 139) 2px,
+    rgba(148, 163, 184, 1) 2px,
+    rgba(148, 163, 184, 1) 10px
+  );
+  border: 1px solid #444cf7;
+  padding: 0.5rem;
+  color: white !important;
+}

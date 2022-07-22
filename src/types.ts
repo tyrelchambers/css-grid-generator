@@ -12,4 +12,5 @@ export interface IGridStore extends GridProps {
   setRowGap: (rowGap: number) => void;
   setColumnGap: (columnGap: number) => void;
   setGap: (gap: number) => void;
+  reset: () => void;
 }
