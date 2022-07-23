@@ -11,7 +11,9 @@ export const createGrid = (grid: GridProps) => {
 
   for (let rowsIndex = 0; rowsIndex < rows; rowsIndex++) {
     for (let columnIndex = 0; columnIndex < columns; columnIndex++) {
-      gridWrapper?.append(createGridElem(columnIndex + rowsIndex + 1));
+      gridWrapper?.append(
+        createGridElem(columnIndex + rowsIndex + 1, columnIndex)
+      );
     }
   }
 

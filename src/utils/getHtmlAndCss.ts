@@ -9,5 +9,6 @@ export function getHtmlAndCss(grid: GridProps) {
   const cssElems = buildCssSnippet(_css);
   const cssString = stylesFromCSSObj(_css);
   const html = buildHtmlSnippet(grid);
+
   return { css: cssElems, cssString, html };
 }

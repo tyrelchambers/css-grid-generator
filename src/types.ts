@@ -1,4 +1,13 @@
+export interface ColumnWidth {
+  value: number;
+  unit: string;
+  column: number;
+}
+
 export type GridProps = {
+  columnWidth: {
+    [key: string]: ColumnWidth;
+  };
   columns: number;
   rows: number;
   rowGap: number;
@@ -13,4 +22,5 @@ export interface IGridStore extends GridProps {
   setColumnGap: (columnGap: number) => void;
   setGap: (gap: number) => void;
   reset: () => void;
+  setColumnWidth: (columnWidth: ColumnWidth) => void;
 }

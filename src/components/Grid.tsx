@@ -11,7 +11,7 @@ const Grid = (grid: GridProps) => {
   }, [grid]);
 
   return (
-    <div className="p-6 h-full">
+    <div className="p-6 h-full w-full ">
       <div
         className={`w-full grid`}
         style={{
@@ -21,7 +21,7 @@ const Grid = (grid: GridProps) => {
         {createColumnHeaders(grid.columns)}
       </div>
       <section
-        className="grid-wrapper border-gray-400 border-2 shadow-xl"
+        className="grid-wrapper border-gray-400 border-2 shadow-xl "
         id="grid-wrapper"
       ></section>
     </div>

@@ -1,4 +1,5 @@
 import { GridProps } from "../types";
+import { buildTemplateColumnsStyles } from "./buildTemplateColumnsStyles";
 
 export const constructCssObject = (grid: GridProps) => {
   return {
@@ -6,7 +7,9 @@ export const constructCssObject = (grid: GridProps) => {
       display: "grid",
       height: "100%",
       ["max-height"]: "500px",
-      [`grid-template-columns`]: `repeat(${grid.columns}, 1fr)`,
+      [`grid-template-columns`]: buildTemplateColumnsStyles(
+        grid.columnWidth
+      ).join(" "),
       [`grid-template-rows`]: `repeat(${grid.rows}, 1fr)`,
       ...(grid.gap > 0
         ? {
